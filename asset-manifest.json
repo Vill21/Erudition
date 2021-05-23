@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Erudition/static/css/main.9c718007.chunk.css",
-    "main.js": "/Erudition/static/js/main.c860a271.chunk.js",
-    "main.js.map": "/Erudition/static/js/main.c860a271.chunk.js.map",
-    "runtime-main.js": "/Erudition/static/js/runtime-main.270c8ea4.js",
-    "runtime-main.js.map": "/Erudition/static/js/runtime-main.270c8ea4.js.map",
-    "static/css/2.ae15fd65.chunk.css": "/Erudition/static/css/2.ae15fd65.chunk.css",
-    "static/js/2.8ec54798.chunk.js": "/Erudition/static/js/2.8ec54798.chunk.js",
-    "static/js/2.8ec54798.chunk.js.map": "/Erudition/static/js/2.8ec54798.chunk.js.map",
-    "static/js/3.b94dd3ec.chunk.js": "/Erudition/static/js/3.b94dd3ec.chunk.js",
-    "static/js/3.b94dd3ec.chunk.js.map": "/Erudition/static/js/3.b94dd3ec.chunk.js.map",
-    "index.html": "/Erudition/index.html",
-    "static/css/2.ae15fd65.chunk.css.map": "/Erudition/static/css/2.ae15fd65.chunk.css.map",
-    "static/css/main.9c718007.chunk.css.map": "/Erudition/static/css/main.9c718007.chunk.css.map",
-    "static/js/2.8ec54798.chunk.js.LICENSE.txt": "/Erudition/static/js/2.8ec54798.chunk.js.LICENSE.txt",
-    "static/media/sphere.ea0e1542.png": "/Erudition/static/media/sphere.ea0e1542.png"
+    "main.css": "/Erudition/index.html/static/css/main.9c718007.chunk.css",
+    "main.js": "/Erudition/index.html/static/js/main.c860a271.chunk.js",
+    "main.js.map": "/Erudition/index.html/static/js/main.c860a271.chunk.js.map",
+    "runtime-main.js": "/Erudition/index.html/static/js/runtime-main.44204bf4.js",
+    "runtime-main.js.map": "/Erudition/index.html/static/js/runtime-main.44204bf4.js.map",
+    "static/css/2.ae15fd65.chunk.css": "/Erudition/index.html/static/css/2.ae15fd65.chunk.css",
+    "static/js/2.f5a9a522.chunk.js": "/Erudition/index.html/static/js/2.f5a9a522.chunk.js",
+    "static/js/2.f5a9a522.chunk.js.map": "/Erudition/index.html/static/js/2.f5a9a522.chunk.js.map",
+    "static/js/3.b94dd3ec.chunk.js": "/Erudition/index.html/static/js/3.b94dd3ec.chunk.js",
+    "static/js/3.b94dd3ec.chunk.js.map": "/Erudition/index.html/static/js/3.b94dd3ec.chunk.js.map",
+    "index.html": "/Erudition/index.html/index.html",
+    "static/css/2.ae15fd65.chunk.css.map": "/Erudition/index.html/static/css/2.ae15fd65.chunk.css.map",
+    "static/css/main.9c718007.chunk.css.map": "/Erudition/index.html/static/css/main.9c718007.chunk.css.map",
+    "static/js/2.f5a9a522.chunk.js.LICENSE.txt": "/Erudition/index.html/static/js/2.f5a9a522.chunk.js.LICENSE.txt",
+    "static/media/sphere.ea0e1542.png": "/Erudition/index.html/static/media/sphere.ea0e1542.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.270c8ea4.js",
+    "static/js/runtime-main.44204bf4.js",
     "static/css/2.ae15fd65.chunk.css",
-    "static/js/2.8ec54798.chunk.js",
+    "static/js/2.f5a9a522.chunk.js",
     "static/css/main.9c718007.chunk.css",
     "static/js/main.c860a271.chunk.js"
   ]
