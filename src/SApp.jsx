@@ -136,19 +136,18 @@ export const App = () => {
     const guessed = action.isRight;
     
     if (guessed === true) {
-      swal("Верно!", `Слово: ${wordsRef?.current?.[indexRef?.current]?.["word"]}`, "success");
+      swal({title: "Верно!", text :`Слово: ${wordsRef?.current?.[indexRef?.current]?.["word"]}`, icon: "success", timer: 3000});
       const newIndex = indexRef?.current + 1;
       setIndex(newIndex);
       const point = pointsRef?.current + 1;
       setArr([]);
       setPoints(point);
-      handleOnClick('say_question', 'Огласи вопрос');
+      setTimeout(() => {handleOnClick('say_question', 'Огласи вопрос')}, 2000);
     } else if (livesRef?.current > 0) {
       let life = livesRef?.current - 1;
       setLives(life);
-      swal(`У вас осталось ${livesRef?.current} попыток`, "", "error");
     }else {
-      swal("Попробуйте снова :(", "", "error");
+      swal({text: "Попробуйте снова :(", icon: "error", timer: 3000});
       setPoints(0);
     }
   }
