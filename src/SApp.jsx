@@ -142,7 +142,7 @@ export const App = () => {
       const point = pointsRef?.current + 1;
       setArr([]);
       setPoints(point);
-      setTimeout(() => {handleOnClick('say_question', 'Огласи вопрос')}, 2000);
+      handleOnClick('say_question', 'Огласи вопрос')
     } else if (livesRef?.current > 0) {
       let life = livesRef?.current - 1;
       setLives(life);
