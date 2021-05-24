@@ -30,6 +30,7 @@ body {
     vertical-align: middle;
 }
 .shine-button {
+  background: linear-gradient(45deg, rgb(0, 0, 0), rgb(5, 93, 96));
     width: 220px;
     height: 80px;
     text-decoration: none;
@@ -41,12 +42,12 @@ body {
     border: 2px solid #21a710;
     border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
-    color: #297262;
+    color: white;
     transition: .2s ease-in-out;
   }
   .shine-button:hover {
-    background: #10834d;
-    color: rgb(0, 0, 0);
+    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(17, 248, 255));
+    color: white;
   }
   .shine-button:hover:before {
     left: 150px;
