@@ -15,7 +15,7 @@ import {Line} from './components/Line'
 import axios from "axios";
 import { IconHeart } from "@sberdevices/plasma-icons";
 import { setRef } from "@sberdevices/plasma-core/utils";
-const API_URL = "https://shielded-escarpment-91826.herokuapp.com/";
+const API_URL = "https://shielded-escarpment-91826.herokuapp.com/words/";
 
 async function getWords() {
   const {data: words} = await axios.get(API_URL);
