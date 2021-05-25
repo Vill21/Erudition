@@ -101,7 +101,8 @@ export const App = () => {
             arr: indArrRef?.current,
             speech: assistantType?.current, 
             possibility: pointsRef?.current,
-            try: tries?.current
+            try: tries?.current,
+            length: wordsRef?.current?.[indexRef?.current]?.["word"].length
           },
       },
     };
