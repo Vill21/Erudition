@@ -209,21 +209,16 @@ export const App = () => {
   return (
     <div className="content">
       <div>
-      <label style={
-          {fontSize: "24pt"}
-        }
-      >Угаданные подряд: {points}</label>
-      <button onClick={() => {handleOnClick('add_life', 'Купить жизнь')}} className="shine-button"><IconHeart color="#FF0000" /><label style={{fontSize: "24pt"}}>: {lives}</label></button>
+      <label className="texts">Угаданные подряд: {points}</label>
+      <button onClick={() => {handleOnClick('add_life', 'Купить жизнь')}} className="shine-button"><IconHeart color="#FF0000" className="texts"/><label className="texts">: {lives}</label></button>
       </div>
-      <Line word={wordsRef?.current?.[indexRef?.current]?.["word"]} indArr={indArr} show={show}/>
+      <div className="resolut"><Line word={wordsRef?.current?.[indexRef?.current]?.["word"]} indArr={indArr} show={show}/></div>
       <TextBox 
         title="Загадка:" 
         size="l" 
         subTitle={wordsRef?.current?.[indexRef?.current]?.["question"]} 
-        style={
-          {margin: "5% 0 0 0",
-          fontSize: "24pt"}
-        }/>
+        className="texts"
+        style={{margin: "3% 0 0 0"}}/>
     </div>
   );
 }
