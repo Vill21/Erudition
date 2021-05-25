@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { darkSber } from '@sberdevices/plasma-tokens/themes'; // Или один из списка: darkEva, darkJoy, lightEva, lightJoy, lightSber
+import { darkSber, darkEva, darkJoy } from '@sberdevices/plasma-tokens/themes'; // Или один из списка: darkEva, darkJoy, lightEva, lightJoy, lightSber
 import {
     text, // Цвет текста
     background, // Цвет подложки
@@ -15,6 +15,7 @@ const DocumentStyle = createGlobalStyle`
     }
 `;
 const ThemeStyle = createGlobalStyle(darkSber);
+const
 export const GlobalStyle = () => (
     <>
         <DocumentStyle />
