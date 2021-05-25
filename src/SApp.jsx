@@ -46,6 +46,8 @@ export const App = () => {
   const [indArr, setArr, indArrRef] = useStateRef([]);
   const assistant = useRef(undefined);
   const assistantType = useRef("formal");
+  const [show, setShow] = useState(false);
+  const tries = useRef(0);
   const [lives, setLives, livesRef] = useStateRef(0);
   
   //инициализирует голосовой ассистент
@@ -98,7 +100,8 @@ export const App = () => {
             lives: livesRef?.current,
             arr: indArrRef?.current,
             speech: assistantType?.current, 
-            possibility: pointsRef?.current
+            possibility: pointsRef?.current,
+            try: tries?.current
           },
       },
     };
@@ -119,7 +122,9 @@ export const App = () => {
         case 'open_letter':
           return open_letter(action);  
         case 'init':
-          return init();      
+          return init();  
+        case 'ease':
+          return ease(action);    
         default:
           throw new Error();
       }
@@ -145,6 +150,23 @@ export const App = () => {
     handleOnClick('say_question', 'Огласи вопрос')
   }
 
+  const ease = (action) => {
+    const flag = action.body;
+    if (flag) {
+      setShow(true);
+      setTimeout(() => { 
+        const newIndex = indexRef?.current + 1;
+        setIndex(newIndex);
+        const point = pointsRef?.current + 1;
+        setArr([]);
+        setPoints(point);
+        handleOnClick('say_question', 'Огласи вопрос');
+        setShow(false);
+       }, 4500);
+    }
+    tries.current = 0;
+  }
+
   //функция обработчик введенного слова
   const guess_word = (action) => {
     const guessed = action.isRight;
@@ -156,13 +178,16 @@ export const App = () => {
       const point = pointsRef?.current + 1;
       setArr([]);
       setPoints(point);
-      handleOnClick('say_question', 'Огласи вопрос')
+      handleOnClick('say_question', 'Огласи вопрос');
+      tries.current = 0;
     } else if (livesRef?.current > 0) {
       let life = livesRef?.current - 1;
       setLives(life);
     }else {
       swal({text: "Попробуйте снова :(", icon: "error", timer: 3000});
       setPoints(0);
+      tries.current += 1;
+      if (tries.current > 3) handleOnClick('ask', 'Облегчи жизнь');
     }
   }
 
@@ -191,7 +216,7 @@ export const App = () => {
       >Угаданные подряд: {points}</label>
       <button onClick={() => {handleOnClick('add_life', 'Купить жизнь')}} className="shine-button"><IconHeart color="#FF0000" /><label style={{fontSize: "24pt"}}>: {lives}</label></button>
       </div>
-      <Line word={wordsRef?.current?.[indexRef?.current]?.["word"]} indArr={indArr}/>
+      <Line word={wordsRef?.current?.[indexRef?.current]?.["word"]} indArr={indArr} show={show}/>
       <TextBox 
         title="Загадка:" 
         size="l" 
