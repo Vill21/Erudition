@@ -186,6 +186,7 @@ export const App = () => {
       swal({text: "Попробуйте снова :(", icon: "error", timer: 3000});
       setPoints(0);
       tries.current += 1;
+      if (tries.current >= 4) handleOnClick('ask', 'помощь');
     }
   }
 
