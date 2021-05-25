@@ -45,6 +45,7 @@ export const App = () => {
   const [points, setPoints, pointsRef] = useStateRef(0);
   const [indArr, setArr, indArrRef] = useStateRef([]);
   const assistant = useRef(undefined);
+  const assistantType = useRef("formal");
   const [lives, setLives, livesRef] = useStateRef(0);
   
   //инициализирует голосовой ассистент
@@ -57,6 +58,17 @@ export const App = () => {
     //Осуществляет подписку на событие получения данных с бэкенда. 
     //Получает команды из appInitialData, если при запуске смартапа не была вызвана команда getInitialData().
     assistant.current.on("data", (event) => {
+      if (event.type == "character") {
+        assistantType.current = event.character.id;
+      }
+      if(event.assistant){
+        if(event.assistant == "official"){
+          assistantType.current = "formal"
+        }
+        else {
+          assistantType.current = "informal"
+        }
+      }
       console.log(`assistant.on(data)`, event);
       const { action } = event;
       dispatchAssistantAction(action);
@@ -84,7 +96,9 @@ export const App = () => {
             future: wordsRef?.current?.[indexRef?.current + 1]?.["question"],
             point: pointsRef?.current,
             lives: livesRef?.current,
-            arr: indArrRef?.current
+            arr: indArrRef?.current,
+            speech: assistantType?.current, 
+            possibility: pointsRef?.current
           },
       },
     };

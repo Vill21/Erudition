@@ -14,11 +14,13 @@ const DocumentStyle = createGlobalStyle`
         background-image: ${gradient};
     }
 `;
-const ThemeStyle = createGlobalStyle(darkSber);
-const
+const ThemeSber = createGlobalStyle(darkSber);
+const ThemeJoy = createGlobalStyle(darkJoy);
+const ThemeEva = createGlobalStyle(darkEva);
+
 export const GlobalStyle = () => (
     <>
         <DocumentStyle />
-        <ThemeStyle />
+        <ThemeSber />
     </>
 );
