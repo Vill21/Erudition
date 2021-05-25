@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Erudition/static/css/main.3cfe4f31.chunk.css",
-    "main.js": "/Erudition/static/js/main.68586dad.chunk.js",
-    "main.js.map": "/Erudition/static/js/main.68586dad.chunk.js.map",
+    "main.js": "/Erudition/static/js/main.c0c952a1.chunk.js",
+    "main.js.map": "/Erudition/static/js/main.c0c952a1.chunk.js.map",
     "runtime-main.js": "/Erudition/static/js/runtime-main.270c8ea4.js",
     "runtime-main.js.map": "/Erudition/static/js/runtime-main.270c8ea4.js.map",
     "static/css/2.ae15fd65.chunk.css": "/Erudition/static/css/2.ae15fd65.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.ae15fd65.chunk.css",
     "static/js/2.7d2a1bc6.chunk.js",
     "static/css/main.3cfe4f31.chunk.css",
-    "static/js/main.68586dad.chunk.js"
+    "static/js/main.c0c952a1.chunk.js"
   ]
 }
