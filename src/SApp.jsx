@@ -178,7 +178,6 @@ export const App = () => {
       const point = pointsRef?.current + 1;
       setArr([]);
       setPoints(point);
-      handleOnClick('say_question', 'Огласи вопрос');
       tries.current = 0;
     } else if (livesRef?.current > 0) {
       let life = livesRef?.current - 1;
