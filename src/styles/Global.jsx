@@ -15,7 +15,7 @@ const DocumentStyle = createGlobalStyle`
     }
 `;
 const ThemeStyle = createGlobalStyle(darkSber);
-const
+
 export const GlobalStyle = () => (
     <>
         <DocumentStyle />
