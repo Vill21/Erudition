@@ -45,6 +45,9 @@ export const App = () => {
   const [points, setPoints, pointsRef] = useStateRef(0);
   const [indArr, setArr, indArrRef] = useStateRef([]);
   const assistant = useRef(undefined);
+  const assistantType = useRef("formal");
+  const [show, setShow] = useState(false);
+  const tries = useRef(0);
   const [lives, setLives, livesRef] = useStateRef(0);
   
   //инициализирует голосовой ассистент
@@ -57,6 +60,17 @@ export const App = () => {
     //Осуществляет подписку на событие получения данных с бэкенда. 
     //Получает команды из appInitialData, если при запуске смартапа не была вызвана команда getInitialData().
     assistant.current.on("data", (event) => {
+      if (event.type == "character") {
+        assistantType.current = event.character.id;
+      }
+      if(event.assistant){
+        if(event.assistant == "official"){
+          assistantType.current = "formal"
+        }
+        else {
+          assistantType.current = "informal"
+        }
+      }
       console.log(`assistant.on(data)`, event);
       const { action } = event;
       dispatchAssistantAction(action);
@@ -87,7 +101,8 @@ export const App = () => {
             arr: indArrRef?.current,
             speech: assistantType?.current, 
             possibility: pointsRef?.current,
-            try: tries?.current
+            try: tries?.current,
+            length: wordsRef?.current?.[indexRef?.current]?.["word"].length
           },
       },
     };
@@ -108,7 +123,9 @@ export const App = () => {
         case 'open_letter':
           return open_letter(action);  
         case 'init':
-          return init();      
+          return init();  
+        case 'ease':
+          return ease(action);    
         default:
           throw new Error();
       }
@@ -134,6 +151,21 @@ export const App = () => {
     handleOnClick('say_question', 'Огласи вопрос')
   }
 
+  const ease = (action) => {
+    const flag = action.body;
+    if (flag) {
+      setShow(true);
+      setTimeout(() => { 
+        const newIndex = indexRef?.current + 1;
+        setIndex(newIndex);
+        setArr([]);
+        handleOnClick('say_question', 'Огласи вопрос');
+        setShow(false);
+       }, 4500);
+    }
+    tries.current = 0;
+  }
+
   //функция обработчик введенного слова
   const guess_word = (action) => {
     const guessed = action.isRight;
@@ -145,7 +177,6 @@ export const App = () => {
       const point = pointsRef?.current + 1;
       setArr([]);
       setPoints(point);
-      handleOnClick('say_question', 'Огласи вопрос');
       tries.current = 0;
     } else if (livesRef?.current > 0) {
       let life = livesRef?.current - 1;
@@ -154,6 +185,7 @@ export const App = () => {
       swal({text: "Попробуйте снова :(", icon: "error", timer: 3000});
       setPoints(0);
       tries.current += 1;
+      if (tries.current >= 4) handleOnClick('ask', 'помощь');
     }
   }
 
@@ -177,21 +209,16 @@ export const App = () => {
   return (
     <div className="content">
       <div>
-      <label style={
-          {fontSize: "24pt"}
-        }
-      >Угаданные подряд: {points}</label>
-      <button onClick={() => {handleOnClick('add_life', 'Купить жизнь')}} className="shine-button"><IconHeart color="#FF0000" /><label style={{fontSize: "24pt"}}>: {lives}</label></button>
+      <label className="texts">Угаданные подряд: {points}</label>
+      <button onClick={() => {handleOnClick('add_life', 'Купить жизнь')}} className="shine-button"><IconHeart color="#FF0000" className="texts"/><label className="texts">: {lives}</label></button>
       </div>
-      <Line word={wordsRef?.current?.[indexRef?.current]?.["word"]} indArr={indArr}/>
+      <div className="resolut"><Line word={wordsRef?.current?.[indexRef?.current]?.["word"]} indArr={indArr} show={show}/></div>
       <TextBox 
         title="Загадка:" 
         size="l" 
         subTitle={wordsRef?.current?.[indexRef?.current]?.["question"]} 
-        style={
-          {margin: "5% 0 0 0",
-          fontSize: "24pt"}
-        }/>
+        className="texts"
+        style={{margin: "3% 0 0 0"}}/>
     </div>
   );
   }

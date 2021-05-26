@@ -8,6 +8,8 @@ export const Line = (props) => {
     //флаг конца отгадывания
     const openedInds = props.indArr;
 
+    const show = props.show;
+
     return (
         <span className="container">
             {   
@@ -15,7 +17,7 @@ export const Line = (props) => {
                     var isIn = openedInds.find((element, ind, array) => {
                         return (element - 1) === index;
                     });
-                    if (isIn) {
+                    if (isIn || show) {
                         return (
                             <label className="word" key={index}>{item}</label>
                         );
