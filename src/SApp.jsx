@@ -7,7 +7,7 @@ import {
   createAssistant,
   AssistantSmartAppCommand
 } from "@sberdevices/assistant-client";
-import { TextBox, Button } from '@sberdevices/plasma-ui';
+import { TextBox, Spinner, TextSkeleton, RectSkeleton } from '@sberdevices/plasma-ui';
 
 import "./SApp.css";
 import {Line} from './components/Line'
@@ -84,7 +84,10 @@ export const App = () => {
             future: wordsRef?.current?.[indexRef?.current + 1]?.["question"],
             point: pointsRef?.current,
             lives: livesRef?.current,
-            arr: indArrRef?.current
+            arr: indArrRef?.current,
+            speech: assistantType?.current, 
+            possibility: pointsRef?.current,
+            try: tries?.current
           },
       },
     };
@@ -142,13 +145,15 @@ export const App = () => {
       const point = pointsRef?.current + 1;
       setArr([]);
       setPoints(point);
-      handleOnClick('say_question', 'Огласи вопрос')
+      handleOnClick('say_question', 'Огласи вопрос');
+      tries.current = 0;
     } else if (livesRef?.current > 0) {
       let life = livesRef?.current - 1;
       setLives(life);
     }else {
       swal({text: "Попробуйте снова :(", icon: "error", timer: 3000});
       setPoints(0);
+      tries.current += 1;
     }
   }
 
@@ -167,7 +172,8 @@ export const App = () => {
     const point = pointsRef?.current - 1;
     setPoints(point);
   }
-
+  
+  if(wordsRef?.current?.[indexRef?.current]?.["word"]){
   return (
     <div className="content">
       <div>
@@ -188,4 +194,16 @@ export const App = () => {
         }/>
     </div>
   );
+  }
+  else{
+    return(
+      <div className="content">
+      <div>
+      <TextSkeleton size="headline1" width="20"/>
+      </div>
+      <div className="resolut"><span><RectSkeleton className="rectsk"/><RectSkeleton className="rectsk"/><RectSkeleton className="rectsk"/><RectSkeleton className="rectsk"/><RectSkeleton className="rectsk"/></span></div>
+      <TextSkeleton size="headline1" width="20" lines="2"/>
+    </div>
+    );
+  };
 }
