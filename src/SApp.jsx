@@ -158,9 +158,7 @@ export const App = () => {
       setTimeout(() => { 
         const newIndex = indexRef?.current + 1;
         setIndex(newIndex);
-        const point = pointsRef?.current + 1;
         setArr([]);
-        setPoints(point);
         handleOnClick('say_question', 'Огласи вопрос');
         setShow(false);
        }, 4500);
