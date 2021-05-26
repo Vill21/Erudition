@@ -114,7 +114,6 @@ body {
     .resolut {
       margin-top: 8%;
     }
-<<<<<<< HEAD
     .rectsk {
       width: 60px;
       height: 60px;
@@ -123,8 +122,6 @@ body {
       margin-left: 0.5%;
       margin-top: 2%;
     }
-=======
->>>>>>> master
   }
   @media screen and (max-width: 959px) and (max-height: 400px){
     .shine-button {
@@ -172,7 +169,6 @@ body {
     .content {
       margin: 2%;
   }
-<<<<<<< HEAD
   .rectsk {
     width: 65px;
     height: 65px;
@@ -183,7 +179,3 @@ body {
   }
   }
   
-=======
-  }
-  
->>>>>>> master

@@ -229,7 +229,7 @@ export const App = () => {
       <TextSkeleton size="headline1" width="20"/>
       </div>
       <div className="resolut"><span><RectSkeleton className="rectsk"/><RectSkeleton className="rectsk"/><RectSkeleton className="rectsk"/><RectSkeleton className="rectsk"/><RectSkeleton className="rectsk"/></span></div>
-      <TextSkeleton size="headline1" width="20" lines="2"/>
+      <TextSkeleton size="headline1" width="20" lines={2} style={{"marginTop": "4%"}}/>
     </div>
     );
   };
