@@ -18,6 +18,10 @@ body {
     padding: 30px auto;
     border-radius: 12px;
 }
+
+.contentDiv {
+  margin-top: 5%;
+}
 .word {
     background-image: linear-gradient(to right, #868f9634 0%, #5961643a 100%);
     color:rgb(240, 248, 255);
@@ -177,5 +181,64 @@ body {
     margin-left: 0.5%;
     margin-top: 2%;
   }
-  }
+}
+  @media screen and (max-width: 450px) and (max-height: 850px){
+    .contentDiv {
+      margin-top: 15%;
+    }
+    .shine-button {
+      background: linear-gradient(45deg, rgb(0, 0, 0), rgb(5, 93, 96));
+      width: 100px;
+      height: 60px;
+      padding: 20px 20px;
+      margin: 0 5% 5% 0;
+      float:right;
+      overflow: hidden;
+      border: 2px solid #125c08;
+      border-radius: 8px;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      transition: .2s ease-in-out;
+      }
+    .shine-button:hover {
+      background: linear-gradient(45deg, rgb(0, 0, 0), rgb(17, 248, 255));
+      color: white;
+    }
+    .shine-button:hover:before {
+      left: 150px;
+      transition: .5s ease-in-out;
+    }
+    .word {
+      background-image: linear-gradient(to right, #868f9634 0%, #5961643a 100%);
+      color:rgb(240, 248, 255);
+      width: 45px;
+      height: 45px;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      display: inline-block;
+      font-size: 15pt;
+      margin-left: 0.5%;
+      margin-top: 2%;
+      vertical-align: middle;
+    }
+    .texts {
+      margin-top: 20%;
+      font-size: 15pt;
+    }
+    .resolut {
+      margin: 50% 0 auto auto;
+    }
+    .content {
+      margin: 2%;
+    }
+    .rectsk {
+    width: 65px;
+    height: 65px;
+    display: inline-block;
+    border-radius: 10px;
+    margin-left: 0.5%;
+    margin-top: 2%;
+    }
+}
   

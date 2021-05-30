@@ -39,7 +39,6 @@ const initializeAssistant = (getState/*: any*/) => {
 };
 
 export const App = () => {
-  //флаг конца отгадывания
   const [words, setWords, wordsRef] = useStateRef([]);
   const [index, setIndex, indexRef] = useStateRef(0);
   const [points, setPoints, pointsRef] = useStateRef(0);
@@ -208,7 +207,7 @@ export const App = () => {
   if(wordsRef?.current?.[indexRef?.current]?.["word"]){
   return (
     <div className="content">
-      <div>
+      <div className="contentDiv">
       <label className="texts">Угаданные подряд: {points}</label>
       <button onClick={() => {handleOnClick('add_life', 'Купить жизнь')}} className="shine-button"><IconHeart color="#FF0000" className="texts"/><label className="texts">: {lives}</label></button>
       </div>
@@ -218,7 +217,7 @@ export const App = () => {
         size="l" 
         subTitle={wordsRef?.current?.[indexRef?.current]?.["question"]} 
         className="texts"
-        style={{margin: "3% 0 0 0"}}/>
+        />
     </div>
   );
   }
