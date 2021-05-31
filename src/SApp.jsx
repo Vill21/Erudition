@@ -13,7 +13,7 @@ import "./SApp.css";
 import {Line} from './components/Line'
 
 import axios from "axios";
-import { IconHeart } from "@sberdevices/plasma-icons";
+import { IconInfo } from "@sberdevices/plasma-icons";
 import { setRef } from "@sberdevices/plasma-core/utils";
 const API_URL = "https://shielded-escarpment-91826.herokuapp.com/words/";
 
@@ -240,17 +240,19 @@ export const App = () => {
   if(wordsRef?.current?.[indexRef?.current]?.["word"]){
   return (
     <div className="content">
-      <div className="contentDiv">
-      <label className="texts">Угаданные подряд: {points}</label>
-      <button onClick={() => {handleOnClick('add_life', 'Купить жизнь')}} className="shine-button"><IconHeart color="#FF0000" className="texts"/><label className="texts">: {lives}</label></button>
-      </div>
-      <div className="resolut"><Line word={wordsRef?.current?.[indexRef?.current]?.["word"]} indArr={indArr} show={show}/></div>
+      <span className="contentDiv"><label className="texts text1">Угаданные подряд: {points}</label>
+      <label className="shine-button"><label className="texts">{lives}</label><svg class="heart" viewBox="0 0 32 29.6">
+  <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+	c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/></svg></label><IconInfo handleOnClick={help} className="info"/>
+      </span>
       <TextBox 
         title="Загадка:" 
         size="l" 
         subTitle={wordsRef?.current?.[indexRef?.current]?.["question"]} 
-        className="texts"
+        className="texts text2"
+        style={{margin: "2% 0 0 0"}}
         />
+        <div className="resolut"><Line word={wordsRef?.current?.[indexRef?.current]?.["word"]} indArr={indArr} show={show}/></div>
     </div>
   );
   }
