@@ -152,7 +152,7 @@ export const App = () => {
 
   const ease = (action) => {
     const flag = action.body;
-    if (flag) {
+    if (flag === true) {
       setShow(true);
       setTimeout(() => { 
         const newIndex = indexRef?.current + 1;
@@ -161,8 +161,24 @@ export const App = () => {
         handleOnClick('say_question', 'Огласи вопрос');
         setShow(false);
        }, 4500);
+    } else if (flag === false) {
+      tries.current = 0;
+    } else if (flag === 'skip') {
+      setShow(true);
+      if (livesRef?.current > 0) {
+        let life = livesRef?.current - 1;
+        setLives(life);
+      } else {
+        setPoints(0);
+      }
+      setTimeout(() => { 
+        const newIndex = indexRef?.current + 1;
+        setIndex(newIndex);
+        setArr([]);
+        handleOnClick('say_question', 'Огласи вопрос');
+        setShow(false);
+       }, 4500);
     }
-    tries.current = 0;
   }
 
   //функция обработчик введенного слова
