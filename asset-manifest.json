@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/Erudition/static/css/main.5a606551.chunk.css",
-    "main.js": "/Erudition/static/js/main.945a2079.chunk.js",
-    "main.js.map": "/Erudition/static/js/main.945a2079.chunk.js.map",
+    "main.css": "/Erudition/static/css/main.a6a22997.chunk.css",
+    "main.js": "/Erudition/static/js/main.a1153f2a.chunk.js",
+    "main.js.map": "/Erudition/static/js/main.a1153f2a.chunk.js.map",
     "runtime-main.js": "/Erudition/static/js/runtime-main.270c8ea4.js",
     "runtime-main.js.map": "/Erudition/static/js/runtime-main.270c8ea4.js.map",
     "static/css/2.ae15fd65.chunk.css": "/Erudition/static/css/2.ae15fd65.chunk.css",
-    "static/js/2.18abcd83.chunk.js": "/Erudition/static/js/2.18abcd83.chunk.js",
-    "static/js/2.18abcd83.chunk.js.map": "/Erudition/static/js/2.18abcd83.chunk.js.map",
+    "static/js/2.c2ad1a67.chunk.js": "/Erudition/static/js/2.c2ad1a67.chunk.js",
+    "static/js/2.c2ad1a67.chunk.js.map": "/Erudition/static/js/2.c2ad1a67.chunk.js.map",
     "static/js/3.b94dd3ec.chunk.js": "/Erudition/static/js/3.b94dd3ec.chunk.js",
     "static/js/3.b94dd3ec.chunk.js.map": "/Erudition/static/js/3.b94dd3ec.chunk.js.map",
     "index.html": "/Erudition/index.html",
     "static/css/2.ae15fd65.chunk.css.map": "/Erudition/static/css/2.ae15fd65.chunk.css.map",
-    "static/css/main.5a606551.chunk.css.map": "/Erudition/static/css/main.5a606551.chunk.css.map",
-    "static/js/2.18abcd83.chunk.js.LICENSE.txt": "/Erudition/static/js/2.18abcd83.chunk.js.LICENSE.txt",
+    "static/css/main.a6a22997.chunk.css.map": "/Erudition/static/css/main.a6a22997.chunk.css.map",
+    "static/js/2.c2ad1a67.chunk.js.LICENSE.txt": "/Erudition/static/js/2.c2ad1a67.chunk.js.LICENSE.txt",
     "static/media/sphere.ea0e1542.png": "/Erudition/static/media/sphere.ea0e1542.png"
   },
   "entrypoints": [
     "static/js/runtime-main.270c8ea4.js",
     "static/css/2.ae15fd65.chunk.css",
-    "static/js/2.18abcd83.chunk.js",
-    "static/css/main.5a606551.chunk.css",
-    "static/js/main.945a2079.chunk.js"
+    "static/js/2.c2ad1a67.chunk.js",
+    "static/css/main.a6a22997.chunk.css",
+    "static/js/main.a1153f2a.chunk.js"
   ]
 }
