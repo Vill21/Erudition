@@ -49,12 +49,11 @@ body {
   border-radius: 50%;
 }
 .info:hover{
-  border: 2px solid #FAED00;
+  border: 2px solid #acff11;
 }
 
 .info:active{
   border: 2px solid #FAED00;
-  opacity: 100%;
 }
 
 .heart {
