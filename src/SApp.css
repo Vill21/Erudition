@@ -51,9 +51,11 @@ body {
 .info:hover{
   border: 2px solid #21BA72;
 }
-
 .info:active{
   border: 2px solid #FAED00;
+}
+.info:focus{
+  border: 2px solid #21BA72;
 }
 
 .heart {
@@ -281,5 +283,11 @@ body {
     margin-left: 0.5%;
     margin-top: 2%;
     }
+}
+
+@media screen and (min-height: 1200px){
+  .container{
+    margin-top: 30%;
+  }
 }
   
