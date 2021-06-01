@@ -5,6 +5,7 @@ body {
 */
 .content {
     margin: 5%;
+    margin-top: 3%;
 }
 .container {
     margin: 0 auto;
@@ -15,9 +16,45 @@ body {
 .texts {
   font-size: 24pt;
 }
+.string{
+  width: 50px;
+  display: flex;
+  align-items: center;
+}
+.string::before,
+.string::after {
+  content: '';
+  flex: 1;
+  border-top: 2px solid #A0E720;
+}
+.string:not(:empty)::before {
+  margin-right: .25em;
+}
 
+.string:not(:empty)::after {
+  margin-left: .25em;
+}
 .info{
-  float: right;
+  width: 50px;
+  height: 50px;
+  padding: 20px 20px;
+  font-size: 20pt;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  border: 2px solid #A0E720;
+  border-radius: 50%;
+}
+.info:hover{
+  opacity: 70%;
+}
+
+.info:active{
+  border: 2px solid #FAED00;
+  opacity: 100%;
 }
 
 .heart {
@@ -32,8 +69,7 @@ body {
 .text1{
   display: flex;
   align-items: center;
-  text-align: center;
-  width: 75%
+  width: 100%;
 }
 .text1::before,
 .text1::after {
@@ -49,7 +85,9 @@ body {
 .text1:not(:empty)::after {
   margin-left: .25em;
 }
-
+.mainbox{
+  margin-top: 3%;
+}
 .contentDiv {
   margin-top: 5%;
 }
@@ -218,6 +256,10 @@ body {
       margin-left: 0.5%;
       margin-top: 2%;
       vertical-align: middle;
+    }
+    .string{
+      font-size: 15pt;
+      margin-top: 4%;
     }
     .texts {
       font-size: 15pt;

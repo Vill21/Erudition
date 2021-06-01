@@ -7,7 +7,7 @@ import {
   createAssistant,
   AssistantSmartAppCommand
 } from "@sberdevices/assistant-client";
-import { TextBox, Spinner, TextSkeleton, RectSkeleton, Button } from '@sberdevices/plasma-ui';
+import { TextBox, Spinner, TextSkeleton, RectSkeleton } from '@sberdevices/plasma-ui';
 
 import "./SApp.css";
 import {Line} from './components/Line'
@@ -243,17 +243,19 @@ export const App = () => {
     <div className="content">
       <span className="contentDiv">
         <div style = {{ "display": "flex", "justifyContent": "space-between"}}>
-          <label className="texts text1">Угаданные подряд: {points}</label>
-          <Button className="info" view="clear" onClick={help}><IconInfo className="info" size="s"/></Button>
+          <label className="string" />
+          <label className="texts text1">Угаданные подряд: {points} 💰</label>
+          <button className="info" view="clear" onClick={help}>?</button>
         </div>
-        <label className="shine-button">
+      </span>
+      <div className="mainbox">
+      <label className="shine-button">
           <label className="texts">{lives}</label>
           <svg class="heart" viewBox="0 0 32 29.6">
             <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
 	          c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
           </svg>
         </label>
-      </span>
       <TextBox 
         title="Загадка:" 
         size="l" 
@@ -261,6 +263,7 @@ export const App = () => {
         className="texts text2"
         style={{margin: "2% 0 0 0"}}
         />
+      </div>
         <div className="resolut"><Line word={wordsRef?.current?.[indexRef?.current]?.["word"]} indArr={indArr} show={show}/></div>
     </div>
   );
