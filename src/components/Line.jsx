@@ -5,9 +5,9 @@ import "../SApp.css";
 export const Line = (props) => {
     //ответ (верное слово)
     const word = props.word || "";
-    //флаг конца отгадывания
+    //массив открытых букв
     const openedInds = props.indArr;
-
+    //флаг конца отгадывания
     const show = props.show;
 
     return (

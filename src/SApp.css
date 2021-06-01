@@ -34,6 +34,7 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
+  width: 75%
 }
 .text1::before,
 .text1::after {
