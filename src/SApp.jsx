@@ -244,7 +244,7 @@ export const App = () => {
       <span className="contentDiv">
         <div style = {{ "display": "flex", "justifyContent": "space-between"}}>
           <label className="texts text1">Угаданные подряд: {points}</label>
-          <Button className="info" view="clear" onClick={help}><IconInfo className="info"/></Button>
+          <Button className="info" view="clear" onClick={help}><IconInfo className="info" size="s"/></Button>
         </div>
         <label className="shine-button">
           <label className="texts">{lives}</label>
