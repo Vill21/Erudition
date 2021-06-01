@@ -7,7 +7,7 @@ import {
   createAssistant,
   AssistantSmartAppCommand
 } from "@sberdevices/assistant-client";
-import { TextBox, Spinner, TextSkeleton, RectSkeleton, Button } from '@sberdevices/plasma-ui';
+import { TextBox, Spinner, TextSkeleton, RectSkeleton } from '@sberdevices/plasma-ui';
 
 import "./SApp.css";
 import {Line} from './components/Line'
@@ -247,7 +247,7 @@ export const App = () => {
         <div style = {{ "display": "flex", "justifyContent": "space-between"}}>
           <label className="string" />
           <label className="texts text1">Угаданные подряд: {points} 💰</label>
-          <Button className="info" view="clear" onClick={help}>?</Button>
+          <button className="info" view="clear" onClick={help}>?</button>
         </div>
       </span>
       <div className="mainbox">
