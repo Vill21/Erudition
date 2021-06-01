@@ -183,8 +183,7 @@ export const App = () => {
     }
   }
 
-  const help = () => {
-    const txt = `⦁ За каждое угаданное слово счетчик комбо увеличивается на 1.
+  const txt_help = `⦁ За каждое угаданное слово счетчик комбо увеличивается на 1.
 
     ⦁ За неправильно угаданное слово счетчик комбо сбрасывается до нуля.
 
@@ -195,7 +194,9 @@ export const App = () => {
     ⦁ Можно попросить ассистента прочитать загадку (команда: прочитай загадку)
     
     ⦁ Можно пропустить слово, если не получается его отгадать (команда: пропусти). Это стоит 1 жизнь или сбрасывает счетчик комбо (если жизней нет).`;
-    swal({text: txt});
+
+  const help = () => {
+    swal({text: txt_help, title: "Справка"});
   }
 
   //функция обработчик введенного слова
@@ -243,7 +244,7 @@ export const App = () => {
       <span className="contentDiv"><label className="texts text1">Угаданные подряд: {points}</label>
       <label className="shine-button"><label className="texts">{lives}</label><svg class="heart" viewBox="0 0 32 29.6">
   <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
-	c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/></svg></label><IconInfo handleOnClick={help} className="info"/>
+	c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/></svg></label><IconInfo onClick={help} className="info"/>
       </span>
       <TextBox 
         title="Загадка:" 
