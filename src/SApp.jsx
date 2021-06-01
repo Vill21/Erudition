@@ -158,6 +158,7 @@ export const App = () => {
       setShow(true);
       setTimeout(() => { 
         const newIndex = indexRef?.current + 1;
+        tries.current = 0;
         setIndex(newIndex);
         setArr([]);
         handleOnClick('say_question', 'Огласи вопрос');
@@ -167,6 +168,7 @@ export const App = () => {
       tries.current = 0;
     } else if (flag === 'skip') {
       setShow(true);
+      tries.current = 0;
       if (livesRef?.current > 0) {
         let life = livesRef?.current - 1;
         setLives(life);
@@ -218,7 +220,7 @@ export const App = () => {
       swal({text: "Попробуйте снова :(", icon: "error", timer: 3000});
       setPoints(0);
       tries.current += 1;
-      if (tries.current >= 4) handleOnClick('ask', 'помощь');
+      if (tries.current >= 8) handleOnClick('ask', 'помощь');
     }
   }
 
