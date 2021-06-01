@@ -49,7 +49,7 @@ body {
   border-radius: 50%;
 }
 .info:hover{
-  opacity: 70%;
+  border: 2px solid #FAED00;
 }
 
 .info:active{
