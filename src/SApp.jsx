@@ -39,15 +39,15 @@ const initializeAssistant = (getState/*: any*/) => {
 };
 
 export const App = () => {
-  const [words, setWords, wordsRef] = useStateRef([]);
-  const [index, setIndex, indexRef] = useStateRef(0);
-  const [points, setPoints, pointsRef] = useStateRef(0);
-  const [indArr, setArr, indArrRef] = useStateRef([]);
-  const assistant = useRef(undefined);
-  const assistantType = useRef("formal");
-  const [show, setShow] = useState(false);
-  const tries = useRef(0);
-  const [lives, setLives, livesRef] = useStateRef(0);
+  const [words, setWords, wordsRef] = useStateRef([]); // массив всех слов в игре
+  const [index, setIndex, indexRef] = useStateRef(0); // индекс текущего слова
+  const [points, setPoints, pointsRef] = useStateRef(0); // очки игрока
+  const [indArr, setArr, indArrRef] = useStateRef([]); // массив открытых букв
+  const assistant = useRef(undefined); // сберовский ассистент
+  const assistantType = useRef("formal"); // unnecessary
+  const [show, setShow] = useState(false); // флаг (показать слово целиком / нет)
+  const tries = useRef(0); // число, ушедшее на разгадывание текущего слова
+  const [lives, setLives, livesRef] = useStateRef(0); // доп жизни игрока
   
   //инициализирует голосовой ассистент
   useEffect(() => {
