@@ -198,7 +198,7 @@ export const App = () => {
     ⦁ Можно пропустить слово, если не получается его отгадать (команда: пропусти). Это стоит 1 жизнь или сбрасывает счетчик комбо (если жизней нет).<br></div>`;
   
   const help = () => {
-    swal.fire({html: txt_help, title: "Справка"});
+    swal.fire({html: txt_help, title: "Справка", showConfirmButton: false, showCloseButton: true});
   }
 
   //функция обработчик введенного слова
