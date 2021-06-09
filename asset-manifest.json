@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Erudition/static/css/main.9ab70418.chunk.css",
+    "main.css": "/Erudition/static/css/main.3825a19b.chunk.css",
     "main.js": "/Erudition/static/js/main.fb06fcd3.chunk.js",
     "main.js.map": "/Erudition/static/js/main.fb06fcd3.chunk.js.map",
     "runtime-main.js": "/Erudition/static/js/runtime-main.716fa7eb.js",
@@ -12,7 +12,7 @@
     "static/js/3.ef2486e1.chunk.js.map": "/Erudition/static/js/3.ef2486e1.chunk.js.map",
     "index.html": "/Erudition/index.html",
     "static/css/2.ae15fd65.chunk.css.map": "/Erudition/static/css/2.ae15fd65.chunk.css.map",
-    "static/css/main.9ab70418.chunk.css.map": "/Erudition/static/css/main.9ab70418.chunk.css.map",
+    "static/css/main.3825a19b.chunk.css.map": "/Erudition/static/css/main.3825a19b.chunk.css.map",
     "static/js/2.29835571.chunk.js.LICENSE.txt": "/Erudition/static/js/2.29835571.chunk.js.LICENSE.txt",
     "static/media/sphere.ea0e1542.png": "/Erudition/static/media/sphere.ea0e1542.png"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.716fa7eb.js",
     "static/css/2.ae15fd65.chunk.css",
     "static/js/2.29835571.chunk.js",
-    "static/css/main.9ab70418.chunk.css",
+    "static/css/main.3825a19b.chunk.css",
     "static/js/main.fb06fcd3.chunk.js"
   ]
 }
