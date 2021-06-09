@@ -17,7 +17,7 @@ body {
   font-size: 24pt;
 }
 .string{
-  width: 50px;
+  width: 74px;
   display: flex;
   align-items: center;
 }
@@ -94,9 +94,7 @@ body {
 }
 .contentDiv {
   margin-top: 5%;
-  vertical-align: middle;
-  align-items: center;
-  justify-content: center;
+
 }
 .word {
     background-image: linear-gradient(to right, #b4b4b480 0%, #b4b4b480 100%);
@@ -156,9 +154,6 @@ body {
       padding: 20px 20px;
       margin-top: 2%;
       }
-      .info{
-        font-size: 18pt;
-      }
     .word {
       width: 60px;
       height: 60px;
@@ -198,9 +193,6 @@ body {
       transition: .2s ease-in-out;
       margin-top: 1.5%;
       }
-    .info{
-      font-size: 18pt;
-    }
     .word {
       color:rgb(240, 248, 255);
       width: 60px;
@@ -248,7 +240,7 @@ body {
       padding: 20px 20px;
       margin: 0 5% 5% 0;
       position: absolute;
-      margin-left: 37%;
+      margin-left: 35%;
       margin-top: 100%;
     }
 
@@ -257,12 +249,9 @@ body {
       height: 40px;
       padding: 10px;
       border-radius: 10px;
-      text-align: center;
-      display: inline-block;
       font-size: 15pt;
       margin-left: 0.5%;
       margin-top: 2%;
-      vertical-align: middle;
     }
     .string{
       font-size: 15pt;
