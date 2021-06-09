@@ -47,6 +47,7 @@ body {
   color: white;
   border: 2px solid #A0E720;
   border-radius: 50%;
+  vertical-align: middle;
 }
 .info:hover{
   border: 2px solid #21BA72;
