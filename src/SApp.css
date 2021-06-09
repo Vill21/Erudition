@@ -92,6 +92,9 @@ body {
 }
 .contentDiv {
   margin-top: 5%;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
 }
 .word {
     background-image: linear-gradient(to right, #b4b4b480 0%, #b4b4b480 100%);

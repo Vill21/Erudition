@@ -247,7 +247,7 @@ export const App = () => {
         <div style = {{ "display": "flex", "justifyContent": "space-between"}}>
           <label className="string" />
           <label className="texts text1">Угаданные подряд: {points} 💰</label>
-          <button className="info" view="clear" onClick={help}><label>?</label></button>
+          <button className="info" onClick={help}><label>?</label></button>
         </div>
       </span>
       <div className="mainbox">
